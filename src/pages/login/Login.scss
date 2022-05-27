@@ -1,0 +1,215 @@
+// @import "../../../assets/scss/app.scss";
+
+.login-wrapper {
+  .login {
+    &-title {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 48px;
+    }
+    &-title {
+      margin-bottom: 6px;
+    }
+    > p {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    &-form {
+      margin: 0 auto;
+      margin-top: 82px;
+      max-width: 380px;
+      &-group {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+      &-remember {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        > p {
+          // margin-top: 3px;
+          font-size: 24px;
+          font-weight: 400;
+          color: gray;
+        }
+        > input {
+          height: 16px;
+          width: 16px;
+          appearance: none;
+          border-radius: 4px;
+          outline: none;
+          background-color: orange !important;
+          cursor: pointer;
+          margin-right: 8px;
+        }
+        > input {
+          visibility: hidden;
+        }
+        .remeber-mark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+        > input:checked ~ .remeber-mark:after {
+          display: block;
+        }
+        .remeber-mark:after {
+          left: 8px;
+          bottom: 5px;
+          width: 6px;
+          height: 12px;
+          border: solid white;
+          border-width: 0 4px 4px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+      &-forgot {
+        .forgot-password {
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 400;
+          color: blue;
+        }
+        .forgot-password:hover {
+          opacity: 0.5;
+        }
+      }
+      &-group {
+        margin-top: 31px;
+        > label {
+          font-size: 12px;
+          font-weight: 600;
+          margin-bottom: 4px;
+        }
+        > input {
+          border: none;
+          padding: 6px 16px;
+          background-color: gray;
+        }
+
+        .login-form-group-remember {
+          display: block;
+          position: relative;
+          padding-left: 24px;
+          margin-bottom: 0;
+          cursor: pointer;
+          > p {
+            display: inline-block;
+            // padding-top: 3px;
+            font-size: 14px;
+            font-weight: 400;
+            color: gray;
+          }
+        }
+        .remeber-mark:hover {
+          opacity: 0.5;
+        }
+
+        input[type="checkbox"] {
+          visibility: hidden;
+        }
+
+        .remeber-mark {
+          border-radius: 4px;
+          position: absolute;
+          top: 5px;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          background-color: blue;
+        }
+        .login-form-group-remember input:checked ~ .remeber-mark {
+          background-color: blue;
+          border-radius: 4px;
+        }
+
+        .remeber-mark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+
+        .login-form-group-remember input:checked ~ .remeber-mark:after {
+          display: block;
+        }
+
+        .login-form-group-remember .remeber-mark:after {
+          left: 5px;
+          bottom: 3px;
+          width: 6px;
+          height: 12px;
+          border: solid white;
+          border-width: 0px 2px 2px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+      &-submit {
+        margin-top: 77px;
+        &-btn {
+          padding: 8px 0;
+          width: 100%;
+          background-color: aqua ;
+          font-size: 14px;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: white;
+          border: none;
+          border-radius: 4px;
+        }
+        &-btn:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .remember-forgot-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 22px;
+  }
+  .directional-signup {
+    margin: 0 auto;
+    margin-top: 80px;
+    max-width: 380px;
+    display: flex;
+    justify-content: center;
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: gray;
+    }
+    &-link {
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none !important;
+      color: blue !important;
+      margin-left: 5px;
+    }
+  }
+  .input-password {
+    position: relative;
+    padding-right: 32px !important;
+  }
+  .show-password {
+    position: absolute;
+    top: 28px;
+    right: 8px;
+    z-index: 10;
+    // opacity: 50%;
+  }
+  .show-password:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  .errors {
+    color: red;
+    font-size: 12px;
+    margin: 4px 0 0 0;
+  }
+}

@@ -1,0 +1,142 @@
+.l-header {
+  display: inline-block;
+  position: relative;
+  min-width: 100%;
+  border-bottom: solid 1px $color_border_header;
+
+  @include mq_tab_down(tab) {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 32px 0;
+    background-color: #f4f4f4;
+
+    .c-ads {
+      padding: 0 20px;
+    }
+  }
+}
+
+.l-footer {
+  display: inline-block;
+  position: relative;
+  min-width: 100%;
+  background-color: $bg_dark_gray;
+
+  .l-pageContent {
+    max-width: 1100px;
+  }
+}
+
+// --------------------------------
+// Top
+// --------------------------------
+.l-topBody {
+}
+
+.l-topMain {
+}
+
+.l-topContent {
+  // min-width: $pc_min_width;
+  max-width: $pc_max_width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $pc_top_content_side_padding;
+  padding-left: $pc_top_content_side_padding;
+
+  @include mq_down(sp) {
+    min-width: auto;
+    padding-right: $sp_top_content_side_padding;
+    padding-left: $sp_top_content_side_padding;
+  }
+}
+
+.l-topSection {
+  display: inline-block;
+  position: relative;
+  min-width: 100%;
+  background-color: $color_main;
+}
+
+// --------------------------------
+// Page
+// --------------------------------
+.l-pageBody {
+}
+
+.l-pageMainSide {
+  display: flex;
+  align-items: stretch;
+
+  @include mq_down(sp) {
+    display: block;
+  }
+
+  .is-sidebar-right {
+    flex-direction: row;
+
+    .l-pageSidebar {
+      margin-right: 0;
+      margin-left: $pc_page_sidebar_margin;
+
+      @include mq_down(sp) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.l-pageMain {
+  flex-grow: 1;
+
+  @include mq_down(sp) {
+    margin: 0 -20px;
+  }
+}
+
+.l-pageSidebar {
+  flex-shrink: 0;
+  width: $pc_page_sidebar_width;
+  margin-left: $pc_page_sidebar_margin;
+
+  @include mq_down(sp) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.l-pageContent {
+  // min-width: $pc_min_width;
+  max-width: $pc_max_width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $pc_page_content_side_padding;
+  padding-left: $pc_page_content_side_padding;
+
+  @include mq_down(sp) {
+    min-width: auto;
+    padding-right: $sp_page_content_side_padding;
+    padding-left: $sp_page_content_side_padding;
+  }
+}
+
+#wpadminbar {
+  position: fixed;
+}
+
+.page-wrapper {
+  overflow-x: hidden;
+  transition: all 0.2s ease-in-out;
+  background-color: $color_main;
+
+  @include mq_tab_down(tab) {
+    padding-top: 65px;
+  }
+
+  .c-menu-open & {
+    background-color: $color_white;
+  }
+}

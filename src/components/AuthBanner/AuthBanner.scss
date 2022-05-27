@@ -1,0 +1,87 @@
+// @import "../../assets/scss/app.scss";
+
+.auth-banner {
+  background-image: url("../../assets/image/authbanner.png");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+
+  // @include tablet {
+  //   display: none;
+  // }
+
+  .slogan {
+    color: white;
+    position: absolute;
+    width: 500px;
+    height: 338px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 160%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    // @include tablet-desktop {
+    //   font-size: 15px;
+    // }
+  }
+
+  .labelWrapper {
+    position: absolute;
+    width: 300px;
+    height: 50.7px;
+    left: 75px;
+    top: 50px;
+
+    // @include tablet-desktop {
+    //   left: 25px;
+    //   top: 25px;
+    // }
+
+    .version {
+      position: absolute;
+      left: calc(50% - 43px / 2 + 100px);
+      top: calc(50% - 24px / 2 - 61px);
+      width: 43px;
+      height: 24px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.002em;
+    }
+
+    .label {
+      position: absolute;
+      left: 0px;
+      top: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .textLabel {
+        width: 142px;
+        height: 29px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 160%;
+        text-align: center;
+        letter-spacing: 0.7em;
+      }
+    }
+  }
+}
