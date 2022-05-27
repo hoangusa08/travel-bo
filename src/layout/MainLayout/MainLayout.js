@@ -1,6 +1,7 @@
 import React from "react";
 import "./MainLayout.scss";
 import SideBar from "../../components/SideBar/SideBar";
+import Header from "../../components/header/Header";
 
 const MainLayout = (props) => {
   return (
@@ -8,7 +9,7 @@ const MainLayout = (props) => {
       <div className="main-layout">
         <div className="d-flex">
           <SideBar />
-          <div className="main-layout-body">{props.children}</div>
+          <div className="main-layout-body"><Header/>{props.children}</div>
         </div>
       </div>
     </>

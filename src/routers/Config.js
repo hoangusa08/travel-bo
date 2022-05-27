@@ -6,6 +6,7 @@ import Register from "../pages/register/Register"
 // import Home from "../pages/home/Home"
 // import Tour from "../pages/tour/tour";
 import Error from "../pages/error/Error";
+import Provider from "../pages/provider/provider";
 // import Account from "../pages/Account/Account";
 // import TourDetail from "../pages/tourDetail/tourDetail";
 
@@ -22,6 +23,12 @@ export const routeConfig = [
     isPrivate: false,
     exact: true,
     component: Login
+  },
+  {
+    path: "/provider",
+    isPrivate: false,
+    exact: true,
+    component: Provider
   },
   { path: "*", component: Error }
 ];

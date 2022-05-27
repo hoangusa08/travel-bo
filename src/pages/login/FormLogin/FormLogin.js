@@ -96,18 +96,6 @@ function FormLogin() {
         </div>
 
         <div className="login-form-group remember-forgot-group">
-          <label className="login-form-group-remember" name="rememberMe">
-            <p>Remember me</p>
-            <input
-              type="checkbox"
-              name="isRemember"
-              // value={values.isRemember}
-              defaultChecked={values.isRemember}
-              onChange={formik.handleChange}
-            />
-            <span className="remeber-mark"></span>
-          </label>
-
           <div className="login-form-forgot">
             <Link to="/fogot-password-enter-email" className="forgot-password">
               Forgot password

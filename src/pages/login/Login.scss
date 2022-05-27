@@ -1,9 +1,10 @@
 // @import "../../../assets/scss/app.scss";
 
 .login-wrapper {
+  align-items: center;
   .login {
     &-title {
-      font-size: 30px;
+      font-size: 40px;
       font-weight: 600;
       line-height: 48px;
     }

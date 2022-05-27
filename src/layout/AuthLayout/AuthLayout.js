@@ -1,19 +1,18 @@
 import React from "react";
-import AuthBanner from "../../components/AuthBanner/AuthBanner";
+import { Link } from "react-router-dom";
 import "./AuthLayout.scss";
 
 const AuthLayout = (props) => {
   return (
-    <>
-      <div className="auth-layout">
-        <div className="row">
-          <div className="col-md-6 ">
-            <AuthBanner />
-          </div>
-          <div className="col-md-6 auth-main">{props.children}</div>
+    <div className="auth-layout">
+      <div className="left">
+        <div className="item">
+          <div>Welcome to travel Viet Nam</div>
+          <Link>Register to Provider tour</Link>
         </div>
       </div>
-    </>
+      <div className="right">{props.children}</div>
+    </div>
   );
 };
 

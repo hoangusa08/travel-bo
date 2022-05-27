@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { logout } from "store/user";
+import { logout } from "../../store/user";
 import { useSelector } from "react-redux";
 // import { USER_ROLE } from "core/constants";
 
