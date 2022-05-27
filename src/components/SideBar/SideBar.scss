@@ -1,0 +1,186 @@
+@import "assets/scss/foundation/variable/variable";
+@import "assets/scss/foundation/mixin/responsive";
+
+.sidebar-wrapper {
+  .sidebar {
+    min-width: 240px;
+    max-width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    z-index: 999;
+    background: $color_blue_dark;
+    color: $color_white;
+    transition: all 0.3s;
+    padding: 0 12px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-header {
+      max-width: 176px;
+      margin: 0 auto;
+      margin-top: 56px;
+    }
+
+    @include mq_down(sp) {
+      min-width: 0;
+      width: 0;
+      padding: 0;
+    }
+
+    &-list {
+      margin-top: 70px;
+
+      @include mq_down(sp) {
+        display: none;
+      }
+
+      &-item {
+        width: 100%;
+        margin-bottom: 15px;
+
+        a {
+          text-decoration: none;
+          color: $color_white;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 10px;
+
+          &:hover {
+            color: $color_white;
+          }
+
+          span {
+            margin-left: 20px;
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .active {
+        a {
+          background: $color_blue_active !important;
+          border-radius: 2px;
+        }
+      }
+    }
+
+    .manage-project:before {
+      display: block;
+      content: " ";
+      background-image: url(../../assets/icons/manage-project.svg);
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .profile-creation::before {
+      display: block;
+      content: " ";
+      background-image: url(../../assets/icons/profile-creation.svg);
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .explore-projects::before {
+      display: block;
+      content: " ";
+      background-image: url(../../assets/icons/explore-projects.svg);
+      background-repeat: no-repeat;
+      background-size: 36px 36px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .my-projects::before {
+      display: block;
+      content: " ";
+      background-image: url(../../assets/icons/my-projects.svg);
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .my-profile::before {
+      display: block;
+      content: " ";
+      background-image: url(../../assets/icons/my-profile.svg);
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .messages::before {
+      display: block;
+      content: " ";
+      background-image: url(../../assets/icons/messages.svg);
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .manage-projects:before {
+      display: inline-block;
+      position: relative;
+      content: " ";
+      background-image: url(../../assets/icons/manage-project.svg);
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+      width: 30px;
+      height: 30px;
+    }
+
+    &-footer {
+      padding: 30px 30px 70px 30px;
+
+      i {
+        cursor: pointer;
+      }
+
+      .user-name {
+        font-weight: 400;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .showSidebar.sidebar {
+    min-width: 250px !important;
+    width: 250px !important;
+    padding: 0 12px !important;
+
+    .sidebar-list {
+      display: block !important;
+    }
+  }
+
+  .ic-menu {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 99999999;
+
+    @include mq_up(pc) {
+      display: none;
+    }
+
+    &-show {
+      position: fixed;
+      left: 260px;
+      top: 15px;
+      cursor: pointer;
+    }
+  }
+}

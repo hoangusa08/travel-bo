@@ -1,0 +1,11 @@
+@import "../../assets/scss/app.scss";
+
+.auth-layout {
+  overflow: hidden;
+	color: $color_white;
+
+	.auth-main {
+		color: $color_black;
+		padding: 50px;
+	}
+}
