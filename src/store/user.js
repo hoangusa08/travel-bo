@@ -53,7 +53,7 @@ const { loginSuccess, logoutSuccess, setLoading } = slice.actions;
 export const login = (values) => async (dispatch) => {
   try {
     dispatch(setLoading({ loading: true }));
-    const data  = await http.post("/authen/login/customer", {
+    const data  = await http.post("/authen/login/adminandprovider", {
       email: values.email,
       password: values.password
     });
@@ -78,7 +78,7 @@ export const login = (values) => async (dispatch) => {
     }
   } catch (e) {
     dispatch(setLoading({ loading: false }));
-    pushToast("error", "Something wrong");
+    pushToast("error", e.message);
     return console.error(e.message);
   }
 };

@@ -7,14 +7,14 @@
     left: 0;
     min-height: 100vh;
     z-index: 999;
-    background: blue;
+    background: #197cfe;
     color: white;
     transition: all 0.3s;
-    padding: 0 12px;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-right: 10px;
 
     &-header {
       max-width: 176px;

@@ -3,12 +3,9 @@
 
 .main-layout {
   width: 100%;
-
   &-body {
-    width: 100%;
     margin-left: 250px;
-    @include mq_down(sp) {
-      margin: 0;
-    }
+    background-color: #f5f7fb;
+    min-height: 99vh;
   }
 }
